@@ -1,0 +1,62 @@
+public class Pair {
+    String P1;
+    String P2;
+    String data;
+    double score;
+    public Pair(String P1, String P2){
+    this.P1 = P1;
+    this.P2 = P2;
+    }
+    public Pair( String data, double score){
+    
+    this.data = data;
+    this.score = score;
+    }
+    void setP1(String P1){
+    this.P1 = P1;
+    }
+    void setP2(String P2){
+    this.P2 = P2;
+    }
+    void setdata(String data){
+    this.data = data;
+    
+    }
+    void setScore(double score){
+    this.score = score;
+    }
+    @Override
+     public String toString(){
+     return P1 + "," + P2;
+     
+     }
+    public String getP1(){
+    return P1;
+    }
+    public String getP2(){
+    return P2 ;
+    }
+    public String getdata(){
+    return data ;
+    
+    }
+    public double getScore(){
+    return score;
+    }
+    @Override
+    public int hashCode(){
+        return P1.hashCode() + P2.hashCode();
+    }
+    
+    @Override
+    public boolean equals(Object anotherPair){
+    if (anotherPair == null){
+        return false;
+    }
+    if(!(anotherPair instanceof Pair)){
+        return false;}
+    Pair anotherPairCast = (Pair) anotherPair;
+    return P1.equals(anotherPairCast.getP1()) && P2.equals(anotherPairCast.getP2()) || P1.equals(anotherPairCast.getP2()) && P2.equals(anotherPairCast.getP1());
+    }
+    
+}
