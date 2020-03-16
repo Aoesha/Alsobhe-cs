@@ -1,0 +1,26 @@
+public class dataset {
+    Set<String> ids = new HashSet<String>();
+    Set<String>Types = new HashSet<String>();
+    List<row> Lines = new ArrayList<row>();
+     public dataset(){
+     
+     }
+     public void setIds(Set<String> ids ){
+     this.ids = ids;
+     }
+     public void setTypes(Set<String> Types){
+         this.Types = Types;
+     }
+     public Set<String> getIds(){
+     return ids;
+     }
+     public Set<String> getTypes(){
+     return Types;
+     }
+     public void setLines(List<row> Lines){
+     this.Lines = Lines;
+     }
+     public List<row> getLines(){
+     return Lines;
+     }
+}
